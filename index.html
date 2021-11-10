@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    
+
+    <title>Conversor de cripto</title>
+</head>
+<body>
+    <h1> <b>Calculadora de criptomoedas</b> </h1>
+    <div class="selection">
+        <select class="choice" name="coinA" id="coinA" onchange="coin.setOptionA('coinA')">
+            <option value=""></option>
+            <option value="BTC">Bitcoin</option>
+            <option value="BCH">Bitcoin Cash</option>
+            <option value="ETH">Ethereum</option>
+        </select>
+        <select class="choice" name="coinB" id="coinB" onchange="coin.setOptionB('coinB')">
+            <option value=""></option>
+            <option value="BTC">Bitcoin</option>
+            <option value="BCH">Bitcoin Cash</option>
+            <option value="ETH">Ethereum</option>
+        </select>
+    </div>
+
+    <div id="input">
+        <input class="input" type="number" id="box_text" value="">
+    </div>
+    
+    <div id="result" >
+        <p></p>
+    </div>
+
+
+    
+    <script src="main.js" type="text/javascript"></script>
+    <script>
+        coin.addEventText()
+        coin.convert()
+        
+    </script>
+</body>
+</html>
